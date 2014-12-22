@@ -152,6 +152,16 @@
                 </execution>
             </executions>
         </plugin>
+      
+            <plugin>
+              <groupId>com.heroku.sdk</groupId>
+              <artifactId>heroku-maven-plugin</artifactId>
+              <version>0.3.0</version>
+              <configuration>
+                <appName>obscure-sierra-7788</appName>
+              </configuration>
+            </plugin>
+          
     </plugins>
   </build>
 
