@@ -158,7 +158,7 @@
               <artifactId>heroku-maven-plugin</artifactId>
               <version>0.3.0</version>
               <configuration>
-                <appName>obscure-sierra-7788</appName>
+                <appName>evening-ocean-1045</appName>
               </configuration>
             </plugin>
           
