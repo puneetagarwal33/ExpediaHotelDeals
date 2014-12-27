@@ -129,6 +129,11 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <version>2.4</version>
+	<configuration>
+          <fork>true</fork>
+          <meminitial>128m</meminitial>
+          <maxmem>300m</maxmem>
+        </configuration>
         <executions>
           <execution>
             <id>copy-dependencies</id>
@@ -167,32 +172,7 @@
                 <appName>evening-ocean-1045</appName>
               </configuration>
             </plugin>
-<plugin>
-          <groupId>de.saumya.mojo</groupId>
-          <artifactId>gem-maven-plugin</artifactId>
-          <version>1.0.5</version>
-          <configuration>
-            <execArgLines>
-              <execArgLine>${project.build.directory}/rubygems/bin/travis</execArgLine>
-              <execArgLine>encrypt</execArgLine>
-              <execArgLine>HEROKU_API_KEY=${herokuApiKey}</execArgLine>
-            </execArgLines>
-          </configuration>
-          <dependencies>
-            <dependency>
-              <groupId>rubygems</groupId>
-              <artifactId>travis</artifactId>
-              <version>1.7.1</version>
-              <type>gem</type>
-            </dependency>
-            <dependency>
-              <groupId>rubygems</groupId>
-              <artifactId>pry</artifactId>
-              <version>0.9.12.6</version>
-              <type>gem</type>
-            </dependency>
-          </dependencies>
-        </plugin>
+
           
     </plugins>
   </build>
