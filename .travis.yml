@@ -1,2 +1,4 @@
-language: java
-script: mvn clean package heroku:deploy-war
+deploy:
+  provider: heroku
+  app: vast-scrubland-5423
+  api_key: "d4cc14d7-ea21-4034-8555-060d3bc78f82"
