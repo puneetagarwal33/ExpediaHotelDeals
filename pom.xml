@@ -204,7 +204,7 @@
               <configuration>
                 <appName>${appName}</appName>
 		<processTypes>
-		     <web>java -jar target/dependency/jetty-runner.jar --port $PORT target/*.war</web>
+		     <web>with_jstack java $JAVA_OPTS -jar target/dependency/jetty-runner.jar --port $PORT target/*.war</web>
 	  </processTypes>
               </configuration>
             </plugin>
