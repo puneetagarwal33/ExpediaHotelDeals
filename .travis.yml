@@ -1,4 +1,11 @@
-deploy:
-  provider: heroku
-  app: vast-scrubland-5423
-  api_key: "d4cc14d7-ea21-4034-8555-060d3bc78f82"
+language: java
+script: mvn clean package heroku:deploy-war
+
+
+env:
+  global:
+    # sets the HEROKU_API_KEY for Heroku deploys
+    secure: "d4cc14d7-ea21-4034-8555-060d3bc78f82"
+
+after_success:
+  ./deploy.sh "$HEROKU_API_KEY"
